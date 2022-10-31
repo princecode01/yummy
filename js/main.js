@@ -171,10 +171,15 @@ $(document).ready(function () {
 
     })
 
-    $('.exit-icon i').click(function () {
+
+    function exitMeal() {
         $('#displayMeal').css('display', 'none');
         $('#rowData').css('display', 'flex');
         $('#search-container').css('display', 'block');
+    }
+
+    $('.exit-icon i').click(function () {
+        exitMeal();
     })
 
     // ----------------------------get&display meal-------------------------------------
@@ -209,7 +214,7 @@ $(document).ready(function () {
 
         let str = `<div class="col-lg-5">
                     <div class="mealImg text-center text-white">
-                        <img src="${meal.strMealThumb}" class="w-75">
+                        <img src="${meal.strMealThumb}" class="w-75 mobile">
                         <h2>${meal.strMeal}</h2>
                     </div>
                 </div>
@@ -424,6 +429,8 @@ $(document).ready(function () {
     $(".nav-item ul a").click(async function (e) {
 
         closeStrip();
+        exitMeal();
+        
         let listBy = e.target.getAttribute("data-list")
 
         $("#search-container").html('');

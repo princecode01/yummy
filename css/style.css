@@ -258,10 +258,25 @@ i {
     box-shadow: 0 .5rem 1rem rgba(255, 255, 255, .1) !important;
 }
 
-@media (max-width:580px) {
+@media screen and (max-width:661px){
     .myM {
-        padding-left: 3.8rem !important;
+        padding-left: 4rem !important;
 
+    }
+    .mobile{
+        width: 75% !important;
+    }
+    .exit-icon{
+        right: 10px;
+    }
+    .mt-4{
+        margin-top: 0px !important;
+    }
+    .p-5{
+        padding-top: 0px !important;
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+        padding-bottom: 3rem !important;
     }
 }
 
